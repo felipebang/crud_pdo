@@ -15,15 +15,20 @@ if (isset($_POST['id'])) {
     $sexo = $_POST['sexo'];
     $area_id = $_POST['area_id'];
     $boletin = $_POST['boletin'];
-    $descripcion = $_POST['descripcion'];
-    
+    $descripcion= isset($_POST['descripcion']) ? $_POST['descripcion'] : 0;
 
     if ($boletin == '') {
         $boletin = 0;
     }
 
-    $query = $con->prepare("UPDATE empleado SET nombre=?, email=?, sexo=?, area_id=?, boletin=?,  WHERE descripcion=?,");
-    $resultado = $query->execute(array($nombre, $email, $sexo, $area_id, $boletin, $descripcion  ));
+
+
+
+
+
+
+    $query = $con->prepare("UPDATE empleado  SET (nombre=?, email=?, sexo=?, area_id=?, boletin=?, descripcion=? WHERE id=?");
+    $resultado = $query->execute(array($nombre, $email, $sexo, $area_id, $boletin,  $descripcion,  $id));
 
     if ($resultado) {
         $correcto = true;
@@ -37,15 +42,17 @@ if (isset($_POST['id'])) {
     $sexo = $_POST['sexo'];
     $area_id = $_POST['area_id'];
     $boletin = $_POST['boletin'];
-    $descripcion = $_POST['descripcion'];
+    $descripcion= isset($_POST['descripcion']) ? $_POST['descripcion'] : 0;
 
 
     if ($boletin == '') {
         $boletin = 0;
     }
 
-    $query = $con->prepare("INSERT INTO empleado (nombre, email, sexo,  boletin, area_id, descripcion) VALUES (:nom, :emai, :sexo, :bole, :area, :descr,  1)");
-    $resultado = $query->execute(array('nom' => $nombre, 'emai' => $email, 'sexo' => $sexo, 'bole' => $boletin, 'area' => $area_id, 'descr'=> $descripcion));
+
+    $query = $con->prepare("INSERT INTO empleado (nombre, email, sexo, area_id,  boletin,  descripcion) VALUES (:cod, :email, :sex, :inv,  :sto, :descri, 1)");
+    $resultado = $query->execute(array('cod' => $nombre, 'email' => $email, 'sex' => $sexo, 'inv' => $area_id, 'sto' => $boletin, 'descri' => $descripcion));
+
 
     if ($resultado) {
         $correcto = true;

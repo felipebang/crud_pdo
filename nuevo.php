@@ -26,113 +26,76 @@
                     <form class="row g-3" method="POST" action="guarda.php" autocomplete="off">
 
                         <div class="col-md-4">
-                            <label for="codigo" class="form-label">Nombre Completo</label>
-                            <input type="text" id="codigo" name="codigo" class="form-control" required autofocus>
+                            <label for="nombre" class="form-label">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" required autofocus>
                         </div>
                         <div class="col-md-4">
-                            <label for="codigo" class="form-label">Correo electronico</label>
-                            <input type="text" id="codigo" name="codigo" class="form-control" required autofocus>
+                            <label for="email" class="form-label">Correo electronico</label>
+                            <input type="text" id="email" name="email" class="form-control" required autofocus>
                         </div>
 
                         <h5>Sexo</h5>
 
-                    
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-  Masculino
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-  Femenino
-  </label>
-</div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="sexo" checked required autofocus>
+                            <label class="form-check-label" for="Masculino">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="sexo" required autofocus>
+                            <label class="form-check-label" for="Femenino">
+                                Femenino
+                            </label>
+                        </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                   
-
-
-
-                        <label for="area_id">Area</label>
-                        <select class="form-check-label" id="area_id">
-                            <option>Administración</option>
-                            <option>Otros</option>
+                        <div class="col-md-12">
+                        <label for="cars">Area</label>
+                        <select name="area_id" id="area_id">
+                            <option value="Desarrollador">Desarrollador</option>
+                            <option value="Analista">Analista</option>
+                            <option value="Tester">Tester</option>
+                            <option value="Diseñador">Diseñador</option>
+                            <option value="Profesional PMO">Profesional PMO</option>
+                            <option value="Profesional de servicios">Profesional de servicios</option>
+                            <option value="Auxiliar administrativo">Auxiliar administrativo</option>
+                            <option value="Codirector">Codirector</option>
                         </select>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <label for="descripcion" class="form-label">Descripción</label>
+                            <input type="text" id="descripcion" name="descripcion" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <h5>ROLES</h5>
+                            <input class="form-check-input" type="checkbox" name="boletin" value="Deseo recibir boletin informativo">
+                            Deseo recibir boletin informativo <br />
+                            <input class="form-check-input" type="checkbox" name="boletin" value="Profesional de proyectos Desarrollo">
+                            Profesional de proyectos Desarrollo<br />
+                            <input class="form-check-input" type="checkbox" name="boletin" value="Gerente estratégico">
+                            Gerente estratégico<br />
+                            <input type="checkbox" class="form-check-input" name="boletin" value="Auxiliar administrativo">
+                            Auxiliar administrativo<br />
+                        </div>
+
+
+
+                            <div class="col-md-12">
+                                <a class="btn btn-secondary" href="index.php">Regresar</a>
+                                <button type="submit" class="btn btn-primary" name="registro">Guardar</button>
+                            </div>
+
+                    </form>
                 </div>
-
-
-
-
-
-                <div class="col-md-12">
-                    <label for="descripcion" class="form-label">Descripción</label>
-                    <input type="text" id="descripcion" name="descripcion" class="form-control" required>
-
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="Deseo_recibir_boletin_informativo" name="Deseo_recibir_boletin_informativo" value="1">
-                        <label for="Deseo_recibir_boletin_informativo" class="form-check-label">Deseo recibir boletin informativo</label>
-                    </div>
-
-                    <h5>ROLES</h5>
-
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="Profesional_de_proyectos_Desarrollo" name="Profesional_de_proyectos_Desarrollo" value="2">
-                        <label for="Profesional_de_proyectos_Desarrollo" class="form-check-label">Profesional de proyectos Desarrollo</label>
-                    </div>
-
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="Gerente_estratégico" name="Gerente_estratégico" value="3">
-                        <label for="Gerente_estratégico" class="form-check-label">Gerente estratégico</label>
-
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="Auxiliar_administrativo" name="Auxiliar_administrativo" value="4">
-                        <label for="Auxiliar_administrativo" class="form-check-label">Auxiliar administrativo</label>
-                    </div>
-                </div>
-
-
-                <div class="col-md-12">
-                    <a class="btn btn-secondary" href="index.php">Regresar</a>
-                    <button type="submit" class="btn btn-primary" name="registro">Guardar</button>
-                </div>
-
-                </form>
             </div>
-        </div>
         </div>
     </main>
 
