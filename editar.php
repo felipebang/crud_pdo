@@ -61,8 +61,8 @@ if ($num > 0) {
 
                         <div class="col-md-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="Masculino" name="Masculino" value="1" />
-                                <input type="checkbox" class="form-check-input" id="Femenino" name="Femenino" value="2" <?php
+                              
+                                <input type="checkbox" class="form-check-input" id="sexo" name="sexo" value="2" <?php
                                                                                                                         if ($row['sexo']) {
                                                                                                                             echo 'checked';
                                                                                                                         }
@@ -81,10 +81,9 @@ if ($num > 0) {
                     
                             <div class="col-md-12">
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="" name="Deseo_recibir_boletin_informativo" value="1" />
-                                    <input type="checkbox" class="form-check-input" id="Profesional_de_proyectos_Desarrollo" name="Profesional_de_proyectos_Desarrollo" value="2" />
-                                    <input type="checkbox" class="form-check-input" id="Gerente_estratégico" name="Gerente_estratégico" value="3" />
-                                    <input type="checkbox" class="form-check-input" id="Femenino" name="Auxiliar_administrativo" value="4"  <?php
+                                    
+                                
+                                    <input type="checkbox" class="form-check-input" id="boletin" name="boletin" value="4"  <?php
                                                                                                                         if ($row['boletin']) {
                                                                                                                             echo 'checked';
                                                                                                                         }
